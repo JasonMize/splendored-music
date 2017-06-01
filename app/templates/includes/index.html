@@ -2,9 +2,25 @@
  
 {% block content %}
     <div class="music-list">
-        <a href="#">
-            <h2>The Human Theme</h2>
-        </a>
+        <div class="panel-group" id="songlist" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <a role="button" data-toggle="collapse" data-parent="#songlist" href="#song1" aria-expanded="true" aria-controls="song1">
+                    <div class="panel-heading" role="tab" id="songHeading1">
+                        <h2 class="panel-title">The Human Theme</h2>
+                    </div>
+                </a>
+                <div id="song1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="songHeading1">
+                    <div class="panel-body">
+                        <div>LYRICS</div>
+                        <div>PLAY</div>
+                        <div>SOMETHING ELSE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
         <a href="#">
             <h2>Johnny Madrid</h2>
         </a>

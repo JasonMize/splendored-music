@@ -9,14 +9,21 @@ body {
     /*min-height: 1000px;*/
 }
 
-.music-list a{
-    color: #FFFB8D;
-    /*font-family: 'Vast Shadow', cursive;*/
-    /*font-family: 'Abril Fatface', cursive;*/
-    font-family: 'Amarante', cursive;
-}
 .music-list {
     margin-top: 600px;
+    font-family: 'Amarante', cursive;
+}
+.music-list h2 {
+    margin-bottom: 40px;
+}
+.music-list a {
+    color: #FFFB8D;
+}
+.music-list .panel-heading {
+    background: black;
+}
+.music-list .panel {
+    border: none;
 }
 
 footer {
