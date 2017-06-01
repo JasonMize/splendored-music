@@ -7,13 +7,20 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="app/static/styles.css">
+    <!-- My styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
         
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amarante" rel="stylesheet">
 
 
 </head>
 <body>
-    <header></header>
+    <header>
+        
+    </header>
     {% block content %}
         
     {% endblock content %}
