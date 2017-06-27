@@ -1,46 +1,130 @@
 {% extends "base.html" %}
  
 {% block content %}
+
+    <script>
+        // on page load
+        $(document).ready(function() {
+            // initial state
+            $("audio").hide();
+            $("i").hide();
+            $(".img_johnny_madrid").hide();
+            $(".img_garden_of_earthly_delights").hide()
+            $(".music-list").removeClass('music-list-high-noon');
+
+            // show on click
+            $("#the_human_theme").click(function() {
+                $("audio").hide().trigger("pause");
+                $("i").hide();
+                $(".img_johnny_madrid").hide();
+                $(".img_garden_of_earthly_delights").hide();
+                $(".music-list").removeClass('music-list-high-noon');
+                $(".audio_the_human_theme").show();
+            })
+            $("#johnny_madrid").click(function() {
+                $("audio").hide().trigger("pause");
+                $("i").hide();
+                $(".img_johnny_madrid").show();
+                $(".img_garden_of_earthly_delights").hide();
+                $(".music-list").removeClass('music-list-high-noon');
+                $(".audio_johnny_madrid").show();
+            })
+            $("#garden_of_earthly_delights").click(function() {
+                $("audio").hide().trigger("pause");
+                $("i").hide();
+                $(".img_johnny_madrid").hide();
+                $(".img_garden_of_earthly_delights").show();
+                $(".music-list").removeClass('music-list-high-noon');
+                $(".audio_garden_of_earthly_delights").show();
+            })
+            $("#high_noon").click(function() {
+                $("audio").hide().trigger("pause");
+                $("i").hide();
+                $(".img_johnny_madrid").hide();
+                $(".img_garden_of_earthly_delights").hide();
+                $('.music-list').addClass('music-list-high-noon');
+                $(".audio_high_noon").show();
+            })
+            $("#seventh_heaven").click(function() {
+                $("audio").hide().trigger("pause");
+                $("i").hide();
+                $(".img_johnny_madrid").hide();
+                $(".img_garden_of_earthly_delights").hide();
+                $(".music-list").removeClass('music-list-high-noon');
+                $(".audio_seventh_heaven").show();
+            })
+            $("#glass_angel").click(function() {
+                $("audio").hide().trigger("pause");
+                $("i").hide();
+                $(".img_johnny_madrid").hide();
+                $(".img_garden_of_earthly_delights").hide();
+                $(".music-list").removeClass('music-list-high-noon');
+                $(".audio_glass_angel").show();
+            })
+            $("#back_to_the_sun").click(function() {
+                $("audio").hide().trigger("pause");
+                $("i").hide();
+                $(".img_johnny_madrid").hide();
+                $(".img_garden_of_earthly_delights").hide();
+                $(".music-list").removeClass('music-list-high-noon');
+                $(".audio_back_to_the_sun").show();
+            })
+            $("#walking_together").click(function() {
+                $("audio").hide().trigger("pause");
+                $("i").hide();
+                $(".img_johnny_madrid").hide();
+                $(".img_garden_of_earthly_delights").hide();
+                $(".music-list").removeClass('music-list-high-noon');
+                $(".audio_walking_together").show();
+            })
+        });
+    </script>
+
+
+
     <div class="music-list">
-        <div class="panel-group" id="songlist" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-                <a role="button" data-toggle="collapse" data-parent="#songlist" href="#song1" aria-expanded="true" aria-controls="song1">
-                    <div class="panel-heading" role="tab" id="songHeading1">
-                        <h2 class="panel-title">The Human Theme</h2>
-                    </div>
-                </a>
-                <div id="song1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="songHeading1">
-                    <div class="panel-body">
-                        <div>LYRICS</div>
-                        <div>PLAY</div>
-                        <div>SOMETHING ELSE</div>
-                    </div>
-                </div>
+        <a href="#the_human_theme">
+            <h2 id="the_human_theme">The Human Theme</h2>
+            <i class="fa fa-female audio_the_human_theme" aria-hidden="true"></i>
+            <audio class="audio_the_human_theme" src="static/assets/audio/the_human_theme.mp3" controls="controls" controlsList="nodownload" />
+        </a>
+        <i class="fa fa-male audio_the_human_theme" aria-hidden="true"></i>
+
+            
+        <a href="#johnny_madrid">
+            <h2 id="johnny_madrid">Johnny Madrid</h2>
+            <div class="audio_johnny_madrid img_johnny_madrid">
+                <audio class="audio_johnny_madrid" src="static/assets/audio/johnny_madrid.mp3" controls="controls" controlsList="nodownload" />
             </div>
-        </div>
-
-
-
-        <a href="#">
-            <h2>Johnny Madrid</h2>
         </a>
-        <a href="#">
-            <h2>Garden Of Earthly Delights</h2>
+            
+        <a href="#garden_of_earthly_delights">
+            <h2 id="garden_of_earthly_delights">Garden Of Earthly Delights</h2>
+            <div class="audio_garden_of_earthly_delights img_garden_of_earthly_delights">
+                <audio class="audio_garden_of_earthly_delights" src="static/assets/audio/garden_of_earthly_delights.mp3" controls="controls" controlsList="nodownload" />
+            </div>
         </a>
-        <a href="#">
-            <h2>High Noon</h2>
+        <a href="#high_noon">
+            <h2 id="high_noon">High Noon</h2>
+            <div class="audio_high_noon">
+                <audio class="audio_high_noon" src="static/assets/audio/high_noon.mp3" controls="controls" controlsList="nodownload" />
+            </div>
         </a>
-        <a href="#">
-            <h2>Seventh Heaven</h2>
+        <a href="#seventh_heaven">
+            <h2 id="seventh_heaven">Seventh Heaven</h2>
+            <audio class="audio_seventh_heaven" src="static/assets/audio/seventh_heaven.mp3" controls="controls" controlsList="nodownload" />
         </a>
-        <a href="#">
-            <h2>Glass Angel</h2>
+        <a href="#glass_angel">
+            <h2 id="glass_angel">Glass Angel</h2>
+            <audio class="audio_glass_angel" src="static/assets/audio/glass_angel.mp3" controls="controls" controlsList="nodownload" />
         </a>
-        <a href="#">
-            <h2>Back To The Sun</h2>
+        <a href="#back_to_the_sun">
+            <h2 id="back_to_the_sun">Back To The Sun</h2>
+            <audio class="audio_back_to_the_sun" src="static/assets/audio/back_to_the_sun.mp3" controls="controls" controlsList="nodownload" />
         </a>
-        <a href="#">
-            <h2>Walking Together</h2>
+        <a href="#walking_together">
+            <h2 id="walking_together">Walking Together</h2>
+            <audio class="audio_walking_together" src="static/assets/audio/walking_together.mp3" controls="controls" controlsList="nodownload" />
         </a>
     </div>
 {% endblock content %}

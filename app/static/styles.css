@@ -1,20 +1,25 @@
 body {
     background-color: black;
     background-image: url('/static/assets/images/tmst_logo_ringless2.jpg');
-    background-size: cover;
-    background-position: 0px -50px;
+    background-size: contain;
+    background-position: center 0;
     background-repeat: no-repeat;
-    color: white;
+    color: #FFFB8D;
     text-align: center;
-    /*min-height: 1000px;*/
+    font-family: 'Amarante', cursive;
 }
 
 .music-list {
-    margin-top: 600px;
-    font-family: 'Amarante', cursive;
+    margin-top: 500px;
+}
+.music-list-high-noon {   
+    background-image: url('/static/assets/images/sun.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
 }
 .music-list h2 {
-    margin-bottom: 40px;
+    margin-top: 40px;
 }
 .music-list a {
     color: #FFFB8D;
@@ -25,8 +30,70 @@ body {
 .music-list .panel {
     border: none;
 }
+.fa-female {
+    color: #ff0072;
+    font-size: 500% !important;
+}
+.fa-male {
+    color: #ff0072;
+    font-size: 500% !important;
+}
+.img_johnny_madrid {
+    background-image: url('/static/assets/images/gun.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    height: 50px;
+}
+.img_garden_of_earthly_delights {
+    background-image: url('/static/assets/images/garden.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    height: 50px;
+}
+.img_high_noon {
+    /*background-image: url('/static/assets/images/sun.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    height: 50px;*/
+}
+
+
+.about {
+    margin-top: 600px;
+}
+.carousel-inner > .item > img {
+    height:400px;
+    margin: auto;
+}
+.album-art img{
+    height: 400px;
+    margin: auto;
+}
+
+
 
 footer {
+    margin-top: 100px;
     min-height: 100px;
+}
+footer span {
+    margin: 0px 50px;
+}
+footer a {
+    font-size: 200%;
+    color: #FFFB8D;
+}
+footer a:hover {
+    color: #FFFB8D;
+}
+footer a:selected {
+    color: #FFFB8D;
+}
+footer a:visited {
+    color: #FFFB8D;
+}
+.facebook-link {
+    height: 40px;
+    width: 40px;
 }
 

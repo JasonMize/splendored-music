@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+ 
+{% block content %}
+<div class="container-fluid">
+    
+    <div class="about">
+        <h1>
+            ABOUT THE THINGS
+        </h1>
+
+        <p>The Many-Splendored Things are an eclectic-melodic-rock trio from Lexington, KY featuring Jason Mize, Diane Timmons, and Andrew Mize.</p>
+
+
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
+
+                <div id="carousel-tmst" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-tmst" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-tmst" data-slide-to="1"></li>
+                        <li data-target="#carousel-tmst" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active text-center">
+                            <img src="/static/assets/images/BOTHTBY_back_cover.jpg" alt="Al's Bar">
+                            <div class="carousel-caption">
+                                Al's Bar
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <img src="/static/assets/images/tmst_band_clearcreek.jpg" alt="Clearcreek Festival">
+                            <div class="carousel-caption">
+                                Clearcreek Festival
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <img src="/static/assets/images/tmst_jason_clearcreek.jpg" alt="Clearcreek Festival">
+                            <div class="carousel-caption">
+                                Clearcreek Festival
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <img src="/static/assets/images/tmst_cosmic_charlies.jpg" alt="Cosmic Charlies">
+                            <div class="carousel-caption">
+                                Cosmic Charlies
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <img src="/static/assets/images/tmst_tickle.jpg">
+                            <div class="carousel-caption">
+                            </div>
+                        </div>
+                        ...
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-tmst" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-tmst" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+
+                <h1>Back On The Horse (That Bit You)</h1>
+                <p>2016 4-song EP</p>
+                <div class="album-art">
+                    <img src="/static/assets/images/tmst_BOTHTBY.jpg" alt="Front Cover of Back On The Horse (That Bit You)">
+                </div>
+
+                <h1>Glass Angel</h1>
+                <p>2017 4-song EP</p>
+                <div class="album-art">
+                    <img src="/static/assets/images/tmst_glass_angel.jpg" alt="Front Cover of Glass Angel">
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock content %}
