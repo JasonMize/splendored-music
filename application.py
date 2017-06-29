@@ -1,7 +1,10 @@
 import sys
  
-from app import app
-# from flask import Flask 
+from app import app 
+from flask import Flask 
+
+application = Flask(__name__)
+app = application
 
 # app = Flask(__name__)
 if __name__ == "__main__":
