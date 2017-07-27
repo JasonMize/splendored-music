@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>TMST</title>
 
     <!-- jQuery -->
@@ -28,25 +31,64 @@
 </head>
 
 <body>
-    <header></header>
+    <script>
+        $(document).ready(function() {
 
-    {% block content %}
-        
-    {% endblock content %}
+            // initial page size
+            let browserWidth = $(window).width();
+            let percentFromTop = 0.45
+            let desiredMargin = browserWidth * percentFromTop;
+            console.log('Starting WIDTH: ', browserWidth);
+            console.log('Starting MARGIN: ', desiredMargin);
+
+            // as page size changes
+            $(window).on('resize', function(){
+                if($(this).width() != browserWidth){
+                    browserWidth = $(this).width();
+                    desiredMargin = $(this).width() * percentFromTop;
+                    console.log('WIDTH: ', browserWidth);
+                    console.log('MARGIN: ', desiredMargin);
+                    location.reload();
+                }
+            });
+            $('#logo_spacing').css('margin-top', desiredMargin);
+        });
+    </script>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <header></header>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="logo_spacing">
+                {% block content %}
+                    
+                {% endblock content %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <footer>
+                <span>
+                    <a href="{{ url_for('.index') }}">Home</a>
+                </span>
+                <span>
+                    <a href="https://www.facebook.com/TheManySplendoredThings/" target="_blank">
+                        <img class="facebook-link" src="/static/assets/images/facebook.png" alt="Link to Facebook">
+                    </a>
+                </span>
+                <span>
+                    <a href="{{ url_for('.about') }}">About The Things</a>
+                </span>
+            </footer>
+        </div>
+    </div>
+
 </body>
-
-<footer>
-    <span>
-        <a href="{{ url_for('.index') }}">Home</a>
-    </span>
-    <span>
-        <a href="https://www.facebook.com/TheManySplendoredThings/" target="_blank">
-            <img class="facebook-link" src="/static/assets/images/facebook.png" alt="Link to Facebook">
-        </a>
-    </span>
-    <span>
-        <a href="{{ url_for('.about') }}">About The Things</a>
-    </span>
-</footer>
-
 </html>

@@ -9,9 +9,7 @@ body {
     font-family: 'Amarante', cursive;
 }
 
-.music-list {
-    margin-top: 500px;
-}
+
 .music-list-high-noon {   
     background-image: url('/static/assets/images/sun.png') !important;
     background-repeat: no-repeat !important;
@@ -58,9 +56,6 @@ body {
 }
 
 
-.about {
-    margin-top: 600px;
-}
 .carousel-inner > .item > img {
     height:400px;
     margin: auto;
@@ -77,7 +72,7 @@ footer {
     min-height: 100px;
 }
 footer span {
-    margin: 0px 50px;
+    margin: 0px 20px;
 }
 footer a {
     font-size: 200%;
