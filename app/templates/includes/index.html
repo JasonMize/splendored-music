@@ -11,6 +11,7 @@
             $(".img_johnny_madrid").hide();
             $(".img_garden_of_earthly_delights").hide()
             $(".music-list").removeClass('music-list-high-noon');
+            $(".img_glass_angel").hide();
 
             // show on click
             $("#the_human_theme").click(function() {
@@ -20,6 +21,7 @@
                 $(".img_garden_of_earthly_delights").hide();
                 $(".music-list").removeClass('music-list-high-noon');
                 $('.music-list').css('background-image', "none");
+                $(".img_glass_angel").hide();
                 $(".audio_the_human_theme").show();
             })
             $("#johnny_madrid").click(function() {
@@ -29,6 +31,7 @@
                 $(".img_garden_of_earthly_delights").hide();
                 $(".music-list").removeClass('music-list-high-noon');
                 $('.music-list').css('background-image', "none");
+                $(".img_glass_angel").hide();
                 $(".audio_johnny_madrid").show();
             })
             $("#garden_of_earthly_delights").click(function() {
@@ -38,6 +41,7 @@
                 $(".img_garden_of_earthly_delights").show();
                 $(".music-list").removeClass('music-list-high-noon');
                 $('.music-list').css('background-image', "none");
+                $(".img_glass_angel").hide();
                 $(".audio_garden_of_earthly_delights").show();
             })
             $("#high_noon").click(function() {
@@ -47,6 +51,7 @@
                 $(".img_garden_of_earthly_delights").hide();
                 $('.music-list').addClass('music-list-high-noon');
                 $('.music-list').css('background-image', "none");
+                $(".img_glass_angel").hide();
                 $(".audio_high_noon").show();
             })
             $("#seventh_heaven").click(function() {
@@ -59,6 +64,7 @@
                 $('.music-list').css('background-size', "contain");
                 $('.music-list').css('background-repeat', "no-repeat");
                 $('.music-list').css('background-position', "center");
+                $(".img_glass_angel").hide();
                 $(".audio_seventh_heaven").show();
             })
             $("#glass_angel").click(function() {
@@ -68,6 +74,7 @@
                 $(".img_garden_of_earthly_delights").hide();
                 $(".music-list").removeClass('music-list-high-noon');
                 $('.music-list').css('background-image', "none");
+                $(".img_glass_angel").show();
                 $(".audio_glass_angel").show();
             })
             $("#back_to_the_sun").click(function() {
@@ -77,6 +84,7 @@
                 $(".img_garden_of_earthly_delights").hide();
                 $(".music-list").removeClass('music-list-high-noon');
                 $('.music-list').css('background-image', "none");
+                $(".img_glass_angel").hide();
                 $(".audio_back_to_the_sun").show();
             })
             $("#walking_together").click(function() {
@@ -86,6 +94,7 @@
                 $(".img_garden_of_earthly_delights").hide();
                 $(".music-list").removeClass('music-list-high-noon');
                 $('.music-list').css('background-image', "none");
+                $(".img_glass_angel").hide();
                 $(".audio_walking_together").show();
             })
         });
@@ -122,7 +131,9 @@
         </div>
         <div class="btn-link">
             <h2 id="glass_angel">Glass Angel</h2>
-            <!-- <audio class="audio_glass_angel" src="static/assets/audio/glass_angel.mp3" controls="controls" controlsList="nodownload" /> -->
+            <div class="img_glass_angel">            
+                <!-- <audio class="audio_glass_angel" src="static/assets/audio/glass_angel.mp3" controls="controls" controlsList="nodownload" /> -->
+            </div>
         </div>
         <div class="btn-link">
             <h2 id="back_to_the_sun">Back To The Sun</h2>

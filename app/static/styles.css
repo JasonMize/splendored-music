@@ -8,13 +8,6 @@ body {
     text-align: center;
     font-family: 'Amarante', cursive;
 }
-
-.music-list-high-noon {   
-    background-image: url('/static/assets/images/sun.png') !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: contain !important;
-}
 .btn-link {
     color: #FFFB8D;
     border: none;
@@ -60,6 +53,18 @@ body {
 }
 .img_garden_of_earthly_delights {
     background-image: url('/static/assets/images/garden.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    height: 50px;
+}
+.music-list-high-noon {   
+    background-image: url('/static/assets/images/sun.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+}
+.img_glass_angel {
+    background-image: url('/static/assets/images/pig.png');
     background-repeat: repeat-x;
     background-size: contain;
     height: 50px;
