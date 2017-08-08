@@ -3,13 +3,6 @@
 {% block content %}
 
     <script>
-        // function to hide and stop audio
-        Audio.prototype.stop = function() {
-            this.hide();
-            this.pause();
-            this.currentTime = 0;
-        };
-
 
         // on page load
         $(document).ready(function() {
@@ -25,7 +18,10 @@
 
             // show on click      
             $("#the_human_theme").click(function() {
-                $("audio").stop;
+                stopAudio('high');
+                $('audio').hide();
+                $(".audio_the_human_theme").show();
+
                 $("i").hide();
                 $(".img_johnny_madrid").hide();
                 $(".img_garden_of_earthly_delights").hide();
@@ -34,10 +30,12 @@
                 $(".img_glass_angel").hide();
                 $(".img_back_to_the_sun").hide();
                 $(".img_walking_together").hide();
-                $(".audio_the_human_theme").show();
             })
             $("#johnny_madrid").click(function() {
-                $("audio").stop;
+                stopAudio('johnny');
+                $('audio').hide();
+                $(".audio_johnny_madrid").show();
+
                 $("i").hide();
                 $(".img_johnny_madrid").show();
                 $(".img_garden_of_earthly_delights").hide();
@@ -46,10 +44,12 @@
                 $(".img_glass_angel").hide();
                 $(".img_back_to_the_sun").hide();
                 $(".img_walking_together").hide();
-                $(".audio_johnny_madrid").show();
             })
             $("#garden_of_earthly_delights").click(function() {
-                $("audio").stop;
+                stopAudio('garden');
+                $('audio').hide();
+                $(".audio_garden_of_earthly_delights").show();
+
                 $("i").hide();
                 $(".img_johnny_madrid").hide();
                 $(".img_garden_of_earthly_delights").show();
@@ -58,10 +58,12 @@
                 $(".img_glass_angel").hide();
                 $(".img_back_to_the_sun").hide();
                 $(".img_walking_together").hide();
-                $(".audio_garden_of_earthly_delights").show();
             })
             $("#high_noon").click(function() {
-                $("audio").stop;
+                stopAudio('noon');
+                $('audio').hide();
+                $(".audio_high_noon").show();
+
                 $("i").hide();
                 $(".img_johnny_madrid").hide();
                 $(".img_garden_of_earthly_delights").hide();
@@ -70,10 +72,12 @@
                 $(".img_glass_angel").hide();
                 $(".img_back_to_the_sun").hide();
                 $(".img_walking_together").hide();
-                $(".audio_high_noon").show();
             })
             $("#seventh_heaven").click(function() {
-                $("audio").stop;
+                stopAudio('heaven');
+                $('audio').hide();
+                $(".audio_seventh_heaven").show();
+
                 $("i").hide();
                 $(".img_johnny_madrid").hide();
                 $(".img_garden_of_earthly_delights").hide();
@@ -85,10 +89,12 @@
                 $(".img_glass_angel").hide();
                 $(".img_back_to_the_sun").hide();
                 $(".img_walking_together").hide();
-                $(".audio_seventh_heaven").show();
             })
             $("#glass_angel").click(function() {
-                $("audio").stop;
+                stopAudio('angel');
+                $('audio').hide();
+                $(".audio_glass_angel").show();
+
                 $("i").hide();
                 $(".img_johnny_madrid").hide();
                 $(".img_garden_of_earthly_delights").hide();
@@ -97,10 +103,12 @@
                 $(".img_glass_angel").show();
                 $(".img_back_to_the_sun").hide();
                 $(".img_walking_together").hide();
-                $(".audio_glass_angel").show();
             })
             $("#back_to_the_sun").click(function() {
-                $("audio").stop;
+                stopAudio('sun');
+                $('audio').hide();
+                $(".audio_back_to_the_sun").show();
+
                 $("i").hide();
                 $(".img_johnny_madrid").hide();
                 $(".img_garden_of_earthly_delights").hide();
@@ -109,10 +117,12 @@
                 $(".img_glass_angel").hide();
                 $(".img_back_to_the_sun").show();
                 $(".img_walking_together").hide();
-                $(".audio_back_to_the_sun").show();
             })
             $("#walking_together").click(function() {
-                $("audio").stop;
+                stopAudio('walking');
+                $('audio').hide();
+                $(".audio_walking_together").show();
+
                 $("i").hide();
                 $(".img_johnny_madrid").hide();
                 $(".img_garden_of_earthly_delights").hide();
@@ -121,8 +131,7 @@
                 $(".img_glass_angel").hide();
                 $(".img_back_to_the_sun").hide();
                 $(".img_walking_together").show();
-                $(".audio_walking_together").show();
-            })
+            })    
         });
     </script>
 
@@ -132,7 +141,7 @@
         <div class="btn-link">
             <h2 id="the_human_theme">The Human Theme</h2>
             <div>
-                <audio class="audio_the_human_theme" src="static/assets/audio/the_human_theme.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
+                <audio id="audio_the_human_theme" class="audio_the_human_theme" src="static/assets/audio/the_human_theme.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
             </div>
             <div>
                 <i class="fa fa-female audio_the_human_theme" aria-hidden="true"></i>
@@ -142,49 +151,136 @@
         <div class="btn-link">
             <h2 id="johnny_madrid">Johnny Madrid</h2>
             <div class="audio_johnny_madrid">
-                <audio class="audio_johnny_madrid" src="static/assets/audio/johnny_madrid.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
+                <audio id="audio_johnny_madrid" class="audio_johnny_madrid" src="static/assets/audio/johnny_madrid.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
             </div>
             <div class="img_johnny_madrid song_image"></div>
         </div>
         <div class="btn-link">
             <h2 id="garden_of_earthly_delights">Garden Of Earthly Delights</h2>
             <div class="audio_garden_of_earthly_delights">
-                <audio class="audio_garden_of_earthly_delights" src="static/assets/audio/garden_of_earthly_delights.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
+                <audio id='audio_garden_of_earthly_delights' class="audio_garden_of_earthly_delights" src="static/assets/audio/garden_of_earthly_delights.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
             </div>
             <div class="img_garden_of_earthly_delights song_image"></div>
         </div>
         <div class="btn-link">
             <h2 id="high_noon">High Noon</h2>
             <div class="audio_high_noon">
-                <audio class="audio_high_noon" src="static/assets/audio/high_noon.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
+                <audio id='audio_high_noon' class="audio_high_noon" src="static/assets/audio/high_noon.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
             </div>
         </div>
         <div class="btn-link">
             <h2 id="seventh_heaven">Seventh Heaven</h2>
             <div>            
-                <audio class="audio_seventh_heaven" src="static/assets/audio/seventh_heaven.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
+                <audio id='audio_seventh_heaven' class="audio_seventh_heaven" src="static/assets/audio/seventh_heaven.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
             </div>
         </div>
         <div class="btn-link">
             <h2 id="glass_angel">Glass Angel</h2>
             <div>
-                <audio class="audio_glass_angel" src="static/assets/audio/glass_angel.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
+                <audio id='audio_glass_angel' class="audio_glass_angel" src="static/assets/audio/glass_angel.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
             </div>
             <div class="img_glass_angel song_image"></div>
         </div>
         <div class="btn-link">
             <h2 id="back_to_the_sun">Back To The Sun</h2>
             <div>
-                <audio class="audio_back_to_the_sun" src="static/assets/audio/back_to_the_sun.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
+                <audio id='audio_back_to_the_sun' class="audio_back_to_the_sun" src="static/assets/audio/back_to_the_sun.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
             </div>
             <div class="img_back_to_the_sun song_image"></div>
         </div>
         <div class="btn-link">
             <h2 id="walking_together">Walking Together</h2>
             <div>
-                <audio class="audio_walking_together" src="static/assets/audio/walking_together.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
+                <audio id='audio_walking_together' class="audio_walking_together" src="static/assets/audio/walking_together.mp3" controls="controls" controlsList="nodownload" preload="none"></audio>
             </div>
             <div class="img_walking_together song_image"></div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        
+        function stopAudio (title) {
+            if (title == 'high') {
+                document.getElementById('audio_the_human_theme').src='static/assets/audio/the_human_theme.mp3';
+                document.getElementById('audio_johnny_madrid').src = '';
+                document.getElementById('audio_garden_of_earthly_delights').src='';
+                document.getElementById('audio_high_noon').src='';
+                document.getElementById('audio_seventh_heaven').src='';
+                document.getElementById('audio_glass_angel').src='';
+                document.getElementById('audio_back_to_the_sun').src='';
+                document.getElementById('audio_walking_together').src='';
+            }
+            if (title == 'johnny') {
+                document.getElementById('audio_the_human_theme').src = '';
+                document.getElementById('audio_johnny_madrid').src = "static/assets/audio/johnny_madrid.mp3";
+                document.getElementById('audio_garden_of_earthly_delights').src='';
+                document.getElementById('audio_high_noon').src='';
+                document.getElementById('audio_seventh_heaven').src='';
+                document.getElementById('audio_glass_angel').src='';
+                document.getElementById('audio_back_to_the_sun').src='';
+                document.getElementById('audio_walking_together').src='';
+            }
+            if (title =='garden') {
+                document.getElementById('audio_the_human_theme').src = '';
+                document.getElementById('audio_johnny_madrid').src = '';
+                document.getElementById('audio_garden_of_earthly_delights').src='static/assets/audio/garden_of_earthly_delights.mp3';
+                document.getElementById('audio_high_noon').src='';
+                document.getElementById('audio_seventh_heaven').src='';
+                document.getElementById('audio_glass_angel').src='';
+                document.getElementById('audio_back_to_the_sun').src='';
+                document.getElementById('audio_walking_together').src='';
+            }
+            if (title == 'noon') {
+                document.getElementById('audio_the_human_theme').src = '';
+                document.getElementById('audio_johnny_madrid').src = '';
+                document.getElementById('audio_garden_of_earthly_delights').src='';
+                document.getElementById('audio_high_noon').src='static/assets/audio/high_noon.mp3';
+                document.getElementById('audio_seventh_heaven').src='';
+                document.getElementById('audio_glass_angel').src='';
+                document.getElementById('audio_back_to_the_sun').src='';
+                document.getElementById('audio_walking_together').src='';
+            }
+            if (title == 'heaven') {
+                document.getElementById('audio_the_human_theme').src = '';
+                document.getElementById('audio_johnny_madrid').src = '';
+                document.getElementById('audio_garden_of_earthly_delights').src='';
+                document.getElementById('audio_high_noon').src='';
+                document.getElementById('audio_seventh_heaven').src='static/assets/audio/seventh_heaven.mp3';
+                document.getElementById('audio_glass_angel').src='';
+                document.getElementById('audio_back_to_the_sun').src='';
+                document.getElementById('audio_walking_together').src='';
+            }
+            if (title == 'angel') {
+                document.getElementById('audio_the_human_theme').src = '';
+                document.getElementById('audio_johnny_madrid').src = '';
+                document.getElementById('audio_garden_of_earthly_delights').src='';
+                document.getElementById('audio_high_noon').src='';
+                document.getElementById('audio_seventh_heaven').src='';
+                document.getElementById('audio_glass_angel').src='static/assets/audio/glass_angel.mp3';
+                document.getElementById('audio_back_to_the_sun').src='';
+                document.getElementById('audio_walking_together').src='';
+            }
+            if (title == 'sun') {
+                document.getElementById('audio_the_human_theme').src = '';
+                document.getElementById('audio_johnny_madrid').src = '';
+                document.getElementById('audio_garden_of_earthly_delights').src='';
+                document.getElementById('audio_high_noon').src='';
+                document.getElementById('audio_seventh_heaven').src='';
+                document.getElementById('audio_glass_angel').src='';
+                document.getElementById('audio_back_to_the_sun').src='static/assets/audio/back_to_the_sun.mp3';
+                document.getElementById('audio_walking_together').src='';
+            }
+            if (title == 'walking') {
+                document.getElementById('audio_the_human_theme').src = '';
+                document.getElementById('audio_johnny_madrid').src = '';
+                document.getElementById('audio_garden_of_earthly_delights').src='';
+                document.getElementById('audio_high_noon').src='';
+                document.getElementById('audio_seventh_heaven').src='';
+                document.getElementById('audio_glass_angel').src='';
+                document.getElementById('audio_back_to_the_sun').src='';
+                document.getElementById('audio_walking_together').src='static/assets/audio/walking_together.mp3';
+            }
+        };
+
+    </script>
 {% endblock content %}
