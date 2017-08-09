@@ -38,31 +38,22 @@ body {
 .music-list .panel {
     border: none;
 }
-.fa-female {
-    color: #ff0072;
-    font-size: 500% !important;
-}
-.fa-male {
-    color: #ff0072;
-    font-size: 500% !important;
-}
+
 .song_image {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     height: 100px;
 }
+.img_the_human_theme {
+    background-image: url('/static/assets/images/rocket.png');
+}
+
 .img_johnny_madrid {
     background-image: url('/static/assets/images/gun.png');
-    /*background-repeat: repeat-x;*/
-    /*background-size: contain;*/
-    /*height: 50px;*/
 }
 .img_garden_of_earthly_delights {
     background-image: url('/static/assets/images/garden.png');
-    /*background-repeat: repeat-x;*/
-    /*background-size: contain;*/
-    /*height: 50px;*/
 }
 .music-list-high-noon {   
     background-image: url('/static/assets/images/sun.png') !important;
@@ -72,22 +63,12 @@ body {
 }
 .img_glass_angel {
     background-image: url('/static/assets/images/pig.png');
-    /*background-repeat: repeat-x;*/
-    /*background-size: contain;*/
-    /*height: 50px;*/
 }
 .img_back_to_the_sun {
     background-image: url('/static/assets/images/rocket.png');
-    /*background-repeat: repeat-x;*/
-    /*background-size: contain;*/
-    /*height: 50px;    */
 }
 .img_walking_together {
     background-image: url('/static/assets/images/walking.png');
-    /*background-repeat: no-repeat;*/
-    /*background-position: center;*/
-    /*background-size: contain;*/
-    /*height: 50px;    */
 }
 
 .carousel-inner > .item > img {
@@ -98,7 +79,6 @@ body {
     height: 400px;
     margin: auto;
 }
-
 
 
 footer {
