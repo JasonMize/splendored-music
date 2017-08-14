@@ -5,7 +5,7 @@ body {
 }
 #logo {
     background-color: black;
-    background-image: url('/static/assets/images/tmst_logo.jpg');
+    background-image: url('/static/assets/images/tmst_logo3.jpg');
     background-size: contain;
     background-position: center 0;
     background-repeat: no-repeat;
@@ -33,6 +33,15 @@ body {
 .btn-link:visited {
     color: #FFFB8D;
     border: none;
+}
+
+.loading {
+    /*z-index: 1001;*/
+    background-image: url('/static/assets/images/hypno_spiral.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*border: 10px solid red;*/
 }
 
 .music-list .panel {
